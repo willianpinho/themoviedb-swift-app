@@ -8,8 +8,17 @@ target 'TheMovieDB-Swift-App' do
   use_frameworks!
 
   # Pods for TheMovieDB-Swift-App
+  # Pod to manage requests
   pod 'Alamofire', '~> 4.0'
+  # Pod to parse/map requests
+  pod 'AlamofireObjectMapper', '~> 5.0'
+  pod 'ObjectMapper', '~> 3.1'
+  pod 'ObjectMapper+Realm'
+  pod 'ObjectMapperAdditions/Realm'
+  # Pod for pretty JSON
   pod 'SwiftyJSON', '~> 3.0'
+  # Pod to create loading
+  pod 'PKHUD'
 
   target 'TheMovieDB-Swift-AppTests' do
     inherit! :search_paths
