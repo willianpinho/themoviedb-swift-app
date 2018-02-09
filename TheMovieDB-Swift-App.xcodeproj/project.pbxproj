@@ -11,14 +11,28 @@
 		185D88512D4BDEE4CC510999 /* Pods_TheMovieDB_Swift_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49611D83EC1BDC56CF6E9E98 /* Pods_TheMovieDB_Swift_App.framework */; };
 		226EF5A664F583E433B58C90 /* Pods_TheMovieDB_Swift_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6729C57FCC045FDC4A31CC82 /* Pods_TheMovieDB_Swift_AppUITests.framework */; };
 		B76B4671202E20470023DD13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76B4670202E20470023DD13 /* AppDelegate.swift */; };
-		B76B4673202E20470023DD13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76B4672202E20470023DD13 /* ViewController.swift */; };
-		B76B4676202E20470023DD13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B76B4674202E20470023DD13 /* Main.storyboard */; };
 		B76B4678202E20470023DD13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B76B4677202E20470023DD13 /* Assets.xcassets */; };
 		B76B467B202E20470023DD13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B76B4679202E20470023DD13 /* LaunchScreen.storyboard */; };
 		B76B4686202E20470023DD13 /* TheMovieDB_Swift_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76B4685202E20470023DD13 /* TheMovieDB_Swift_AppTests.swift */; };
 		B76B4691202E20470023DD13 /* TheMovieDB_Swift_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76B4690202E20470023DD13 /* TheMovieDB_Swift_AppUITests.swift */; };
 		B76B46AA202E46230023DD13 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76B46A9202E46230023DD13 /* APIManager.swift */; };
 		B76B46AC202E47950023DD13 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76B46AB202E47950023DD13 /* APIConstants.swift */; };
+		B76B46AF202E49E90023DD13 /* UpcomingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76B46AE202E49E90023DD13 /* UpcomingListViewController.swift */; };
+		B76B46B1202E49FA0023DD13 /* UpcomingListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76B46B0202E49FA0023DD13 /* UpcomingListPresenter.swift */; };
+		B76B46B4202E4A160023DD13 /* UpcomingList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B76B46B3202E4A160023DD13 /* UpcomingList.storyboard */; };
+		B76B46CC202E4B570023DD13 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76B46CB202E4B570023DD13 /* UIFont+Extension.swift */; };
+		B76B46CE202E4B7F0023DD13 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76B46CD202E4B7F0023DD13 /* UIViewController+Extension.swift */; };
+		B76B46D1202E4CB90023DD13 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76B46D0202E4CB90023DD13 /* Alert.swift */; };
+		B76B46EA202E511B0023DD13 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B76B46DF202E50D50023DD13 /* OpenSans-Bold.ttf */; };
+		B76B46EB202E511B0023DD13 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B76B46DC202E50D50023DD13 /* OpenSans-BoldItalic.ttf */; };
+		B76B46EC202E511B0023DD13 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B76B46DD202E50D50023DD13 /* OpenSans-ExtraBold.ttf */; };
+		B76B46ED202E511B0023DD13 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B76B46DB202E50D50023DD13 /* OpenSans-ExtraBoldItalic.ttf */; };
+		B76B46EE202E511B0023DD13 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B76B46D9202E50D50023DD13 /* OpenSans-Italic.ttf */; };
+		B76B46EF202E511B0023DD13 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B76B46D8202E50D50023DD13 /* OpenSans-Light.ttf */; };
+		B76B46F0202E511B0023DD13 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B76B46D6202E50D50023DD13 /* OpenSans-LightItalic.ttf */; };
+		B76B46F1202E511B0023DD13 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B76B46DA202E50D50023DD13 /* OpenSans-Regular.ttf */; };
+		B76B46F2202E511B0023DD13 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B76B46D7202E50D50023DD13 /* OpenSans-Semibold.ttf */; };
+		B76B46F3202E511B0023DD13 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B76B46DE202E50D50023DD13 /* OpenSans-SemiboldItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +62,6 @@
 		90C1A2894CFF8FB8F9C653D5 /* Pods-TheMovieDB-Swift-AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheMovieDB-Swift-AppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheMovieDB-Swift-AppTests/Pods-TheMovieDB-Swift-AppTests.release.xcconfig"; sourceTree = "<group>"; };
 		B76B466D202E20470023DD13 /* TheMovieDB-Swift-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TheMovieDB-Swift-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B76B4670202E20470023DD13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B76B4672202E20470023DD13 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B76B4675202E20470023DD13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B76B4677202E20470023DD13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B76B467A202E20470023DD13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B76B467C202E20470023DD13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,6 +73,22 @@
 		B76B4692202E20470023DD13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B76B46A9202E46230023DD13 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		B76B46AB202E47950023DD13 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		B76B46AE202E49E90023DD13 /* UpcomingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingListViewController.swift; sourceTree = "<group>"; };
+		B76B46B0202E49FA0023DD13 /* UpcomingListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingListPresenter.swift; sourceTree = "<group>"; };
+		B76B46B3202E4A160023DD13 /* UpcomingList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UpcomingList.storyboard; sourceTree = "<group>"; };
+		B76B46CB202E4B570023DD13 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		B76B46CD202E4B7F0023DD13 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		B76B46D0202E4CB90023DD13 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		B76B46D6202E50D50023DD13 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		B76B46D7202E50D50023DD13 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		B76B46D8202E50D50023DD13 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		B76B46D9202E50D50023DD13 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		B76B46DA202E50D50023DD13 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		B76B46DB202E50D50023DD13 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		B76B46DC202E50D50023DD13 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		B76B46DD202E50D50023DD13 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		B76B46DE202E50D50023DD13 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		B76B46DF202E50D50023DD13 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		CA3EBD076E79983B381BFFFB /* Pods_TheMovieDB_Swift_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheMovieDB_Swift_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2CEA5680684BFBBF82E1CC3 /* Pods-TheMovieDB-Swift-AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheMovieDB-Swift-AppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TheMovieDB-Swift-AppUITests/Pods-TheMovieDB-Swift-AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -180,8 +208,8 @@
 		B76B469F202E3C060023DD13 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				B76B4679202E20470023DD13 /* LaunchScreen.storyboard */,
-				B76B4674202E20470023DD13 /* Main.storyboard */,
+				B76B46B5202E4A360023DD13 /* launch screen */,
+				B76B46B2202E4A050023DD13 /* upcoming list */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -198,6 +226,8 @@
 		B76B46A2202E3D8F0023DD13 /* helpers */ = {
 			isa = PBXGroup;
 			children = (
+				B76B46CF202E4C970023DD13 /* util */,
+				B76B46B6202E4B210023DD13 /* fonts */,
 				B76B46A3202E3DB10023DD13 /* extensions */,
 				B76B46A1202E3C590023DD13 /* managers */,
 			);
@@ -207,6 +237,8 @@
 		B76B46A3202E3DB10023DD13 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B76B46CB202E4B570023DD13 /* UIFont+Extension.swift */,
+				B76B46CD202E4B7F0023DD13 /* UIViewController+Extension.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -214,9 +246,59 @@
 		B76B46A4202E3DC80023DD13 /* application */ = {
 			isa = PBXGroup;
 			children = (
-				B76B4672202E20470023DD13 /* ViewController.swift */,
+				B76B46AD202E499A0023DD13 /* upcoming list */,
 			);
 			path = application;
+			sourceTree = "<group>";
+		};
+		B76B46AD202E499A0023DD13 /* upcoming list */ = {
+			isa = PBXGroup;
+			children = (
+				B76B46AE202E49E90023DD13 /* UpcomingListViewController.swift */,
+				B76B46B0202E49FA0023DD13 /* UpcomingListPresenter.swift */,
+			);
+			path = "upcoming list";
+			sourceTree = "<group>";
+		};
+		B76B46B2202E4A050023DD13 /* upcoming list */ = {
+			isa = PBXGroup;
+			children = (
+				B76B46B3202E4A160023DD13 /* UpcomingList.storyboard */,
+			);
+			path = "upcoming list";
+			sourceTree = "<group>";
+		};
+		B76B46B5202E4A360023DD13 /* launch screen */ = {
+			isa = PBXGroup;
+			children = (
+				B76B4679202E20470023DD13 /* LaunchScreen.storyboard */,
+			);
+			path = "launch screen";
+			sourceTree = "<group>";
+		};
+		B76B46B6202E4B210023DD13 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B76B46DF202E50D50023DD13 /* OpenSans-Bold.ttf */,
+				B76B46DC202E50D50023DD13 /* OpenSans-BoldItalic.ttf */,
+				B76B46DD202E50D50023DD13 /* OpenSans-ExtraBold.ttf */,
+				B76B46DB202E50D50023DD13 /* OpenSans-ExtraBoldItalic.ttf */,
+				B76B46D9202E50D50023DD13 /* OpenSans-Italic.ttf */,
+				B76B46D8202E50D50023DD13 /* OpenSans-Light.ttf */,
+				B76B46D6202E50D50023DD13 /* OpenSans-LightItalic.ttf */,
+				B76B46DA202E50D50023DD13 /* OpenSans-Regular.ttf */,
+				B76B46D7202E50D50023DD13 /* OpenSans-Semibold.ttf */,
+				B76B46DE202E50D50023DD13 /* OpenSans-SemiboldItalic.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		B76B46CF202E4C970023DD13 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				B76B46D0202E4CB90023DD13 /* Alert.swift */,
+			);
+			path = util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,9 +417,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B76B46EA202E511B0023DD13 /* OpenSans-Bold.ttf in Resources */,
+				B76B46EB202E511B0023DD13 /* OpenSans-BoldItalic.ttf in Resources */,
+				B76B46EC202E511B0023DD13 /* OpenSans-ExtraBold.ttf in Resources */,
+				B76B46ED202E511B0023DD13 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				B76B46EE202E511B0023DD13 /* OpenSans-Italic.ttf in Resources */,
+				B76B46EF202E511B0023DD13 /* OpenSans-Light.ttf in Resources */,
+				B76B46F0202E511B0023DD13 /* OpenSans-LightItalic.ttf in Resources */,
+				B76B46F1202E511B0023DD13 /* OpenSans-Regular.ttf in Resources */,
+				B76B46F2202E511B0023DD13 /* OpenSans-Semibold.ttf in Resources */,
+				B76B46F3202E511B0023DD13 /* OpenSans-SemiboldItalic.ttf in Resources */,
+				B76B46B4202E4A160023DD13 /* UpcomingList.storyboard in Resources */,
 				B76B467B202E20470023DD13 /* LaunchScreen.storyboard in Resources */,
 				B76B4678202E20470023DD13 /* Assets.xcassets in Resources */,
-				B76B4676202E20470023DD13 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,11 +491,27 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TheMovieDB-Swift-App/Pods-TheMovieDB-Swift-App-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper+Realm/ObjectMapper_Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapperAdditions/ObjectMapperAdditions.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmAdditions/RealmAdditions.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper_Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapperAdditions.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmAdditions.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -514,10 +622,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B76B46CC202E4B570023DD13 /* UIFont+Extension.swift in Sources */,
 				B76B46AC202E47950023DD13 /* APIConstants.swift in Sources */,
 				B76B46AA202E46230023DD13 /* APIManager.swift in Sources */,
-				B76B4673202E20470023DD13 /* ViewController.swift in Sources */,
 				B76B4671202E20470023DD13 /* AppDelegate.swift in Sources */,
+				B76B46CE202E4B7F0023DD13 /* UIViewController+Extension.swift in Sources */,
+				B76B46B1202E49FA0023DD13 /* UpcomingListPresenter.swift in Sources */,
+				B76B46D1202E4CB90023DD13 /* Alert.swift in Sources */,
+				B76B46AF202E49E90023DD13 /* UpcomingListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,14 +665,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B76B4674202E20470023DD13 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B76B4675202E20470023DD13 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B76B4679202E20470023DD13 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
