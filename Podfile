@@ -8,6 +8,8 @@ target 'TheMovieDB-Swift-App' do
   use_frameworks!
 
   # Pods for TheMovieDB-Swift-App
+  pod 'Alamofire', '~> 4.0'
+  pod 'SwiftyJSON', '~> 3.0'
 
   target 'TheMovieDB-Swift-AppTests' do
     inherit! :search_paths

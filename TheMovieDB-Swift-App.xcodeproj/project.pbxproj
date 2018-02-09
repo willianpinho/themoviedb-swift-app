@@ -17,6 +17,8 @@
 		B76B467B202E20470023DD13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B76B4679202E20470023DD13 /* LaunchScreen.storyboard */; };
 		B76B4686202E20470023DD13 /* TheMovieDB_Swift_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76B4685202E20470023DD13 /* TheMovieDB_Swift_AppTests.swift */; };
 		B76B4691202E20470023DD13 /* TheMovieDB_Swift_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76B4690202E20470023DD13 /* TheMovieDB_Swift_AppUITests.swift */; };
+		B76B46AA202E46230023DD13 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76B46A9202E46230023DD13 /* APIManager.swift */; };
+		B76B46AC202E47950023DD13 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76B46AB202E47950023DD13 /* APIConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		B76B468C202E20470023DD13 /* TheMovieDB-Swift-AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TheMovieDB-Swift-AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B76B4690202E20470023DD13 /* TheMovieDB_Swift_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMovieDB_Swift_AppUITests.swift; sourceTree = "<group>"; };
 		B76B4692202E20470023DD13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B76B46A9202E46230023DD13 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		B76B46AB202E47950023DD13 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		CA3EBD076E79983B381BFFFB /* Pods_TheMovieDB_Swift_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheMovieDB_Swift_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2CEA5680684BFBBF82E1CC3 /* Pods-TheMovieDB-Swift-AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheMovieDB-Swift-AppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TheMovieDB-Swift-AppUITests/Pods-TheMovieDB-Swift-AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -185,6 +189,8 @@
 		B76B46A1202E3C590023DD13 /* managers */ = {
 			isa = PBXGroup;
 			children = (
+				B76B46A9202E46230023DD13 /* APIManager.swift */,
+				B76B46AB202E47950023DD13 /* APIConstants.swift */,
 			);
 			path = managers;
 			sourceTree = "<group>";
@@ -391,9 +397,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TheMovieDB-Swift-App/Pods-TheMovieDB-Swift-App-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -503,6 +514,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B76B46AC202E47950023DD13 /* APIConstants.swift in Sources */,
+				B76B46AA202E46230023DD13 /* APIManager.swift in Sources */,
 				B76B4673202E20470023DD13 /* ViewController.swift in Sources */,
 				B76B4671202E20470023DD13 /* AppDelegate.swift in Sources */,
 			);
