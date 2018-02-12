@@ -19,6 +19,8 @@ target 'TheMovieDB-Swift-App' do
   pod 'SwiftyJSON', '~> 3.0'
   # Pod to create loading
   pod 'PKHUD'
+  # Pod to cache images
+  pod 'Kingfisher', '~> 4.0'
 
   target 'TheMovieDB-Swift-AppTests' do
     inherit! :search_paths
