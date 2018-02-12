@@ -85,4 +85,20 @@ enum Endpoints {
             }
         }
     }
+    
+    enum Genres: Endpoint {
+        case root
+        
+        public var path: String {
+            switch self {
+            case .root: return "/genre/movie/list"
+            }
+        }
+        
+        public var url: String {
+            switch self {
+            case .root: return API.createUrl(path: Endpoints.Genres.root.path)
+            }
+        }
+    }
 }

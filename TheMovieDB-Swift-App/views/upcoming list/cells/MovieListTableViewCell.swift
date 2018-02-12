@@ -10,7 +10,7 @@ import UIKit
 import Kingfisher
 
 class MovieListTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var posterImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var genresLabel: UILabel!
@@ -21,10 +21,10 @@ class MovieListTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
@@ -46,6 +46,26 @@ class MovieListTableViewCell: UITableViewCell {
         
         if let voteAverage = movie.voteAverage {
             cell.voteAverageLabel.text = String(format: "%.1f", voteAverage) + "/10"
+        }
+        
+        if let genres = movie.genreIds {
+            var genreString = String()
+            
+            _ = genres.flatMap{
+                let currentGenre:Genre = DBManager.getByPrimaryKey(value: $0)
+                if let genreName = currentGenre.name {
+                    if genres.last == $0 {
+                        genreString = genreString + genreName
+                    } else {
+                        genreString = genreString + genreName + ", "
+                    }
+                }
+                
+                return genreString
+            }
+            
+            cell.genresLabel.text = genreString
+            
         }
         
         return cell

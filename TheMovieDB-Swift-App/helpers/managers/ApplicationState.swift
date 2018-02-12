@@ -25,4 +25,18 @@ class ApplicationState {
         
         return nil
     }
+    
+    static func initializeLocalDatabase() {
+        self.initializeGenres()
+    }
+    
+    static func initializeGenres() {
+        GenreService.getAllGenres { (success, message, genres) in
+            if success == true {
+                for g in genres! {
+                    DBManager.update(g)
+                }
+            }
+        }
+    }
 }

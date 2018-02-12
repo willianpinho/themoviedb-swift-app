@@ -12,8 +12,9 @@ import RealmSwift
 import RealmAdditions
 
 class Genre: Object, Mappable {
-    var id: String?
-    var name: String?
+
+    @objc dynamic var id = 0
+    @objc dynamic var name: String?
     
     required convenience init?(map: Map) {
         self.init()
@@ -22,6 +23,10 @@ class Genre: Object, Mappable {
     func mapping(map: Map) {
         id <- map["id"]
         name <- map["name"]
+    }
+    
+    override static func primaryKey() -> String? {
+        return "id"
     }
     
 }

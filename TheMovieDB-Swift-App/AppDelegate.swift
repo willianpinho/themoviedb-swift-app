@@ -10,7 +10,7 @@ import UIKit
 import Realm
 import RealmSwift
 
-let realmSchemaVersion:UInt64 = 2
+let realmSchemaVersion:UInt64 = 1
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,8 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         self.configureRealmMigration()
         _ = ApplicationState.sharedInstance.getConfiguration()
-
-
+        ApplicationState.initializeLocalDatabase()
+        
         return true
     }
     
