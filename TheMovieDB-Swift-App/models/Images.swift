@@ -34,5 +34,18 @@ class Images: Object, Mappable {
         stillSizes <- map["still_sizes"]
     }
     
+    static func generateImageUrl(path: String, size: Int) -> String? {
+        switch size {
+        case 300:
+            return Endpoints.Images.image300.url + path
+        case 500:
+            return Endpoints.Images.image500.url + path
+        case 780:
+            return Endpoints.Images.image780.url + path
+        default:
+            return Endpoints.Images.image500.url + path
+        }
+    }
+    
 }
 

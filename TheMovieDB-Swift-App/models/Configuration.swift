@@ -12,8 +12,8 @@ import RealmSwift
 import RealmAdditions
 
 class Configuration: Object, Mappable {
-    var images: Images?
-    var changeKeys: [String]?
+    @objc dynamic var images: Images?
+    var changeKeys = List<String>()
     
     required convenience init?(map: Map) {
         self.init()

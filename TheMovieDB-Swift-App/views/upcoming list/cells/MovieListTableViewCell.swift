@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MovieListTableViewCell: UITableViewCell {
 
@@ -25,6 +26,29 @@ class MovieListTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    static func loadData(cell: MovieListTableViewCell, movie: Movie) -> MovieListTableViewCell? {
+        if let title = movie.title {
+            cell.titleLabel.text = title
+        }
+        
+        if let releaseDate = movie.releaseDate {
+            cell.releaseDateLabel.text = FormatString.convertDateToString(date: releaseDate)
+        }
+        
+        if let posterPath = movie.posterPath {
+            if let urlString = Images.generateImageUrl(path: posterPath, size: 500) {
+                let url = URL(string: urlString)
+                cell.posterImage.kf.setImage(with: url)
+            }
+        }
+        
+        if let voteAverage = movie.voteAverage {
+            cell.voteAverageLabel.text = String(format: "%.1f", voteAverage) + "/10"
+        }
+        
+        return cell
     }
     
 }
