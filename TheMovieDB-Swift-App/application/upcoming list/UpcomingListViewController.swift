@@ -10,12 +10,16 @@ import UIKit
 import PKHUD
 
 class UpcomingListViewController: UIViewController {
+    @IBOutlet weak var tableView: UITableView!
+    
     var presenter = UpcomingListPresenter()
-
+    var currentPage:Int = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setPresenterDelegate()
         self.customLayout()
+        self.presenter.loadMovieList(page: currentPage)
     }
     
     func setPresenterDelegate() {
@@ -29,6 +33,10 @@ class UpcomingListViewController: UIViewController {
 }
 
 extension UpcomingListViewController: UpcomingListView {
+    func setupMoviesList(movies: [Movie]?) {
+        
+    }
+    
     func showLoading() {
         PKHUD.sharedHUD.show()
     }
