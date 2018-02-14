@@ -19,7 +19,8 @@ protocol UpcomingListView: NSObjectProtocol {
 
 class UpcomingListPresenter: NSObject {
     var view: UpcomingListView?
-
+    var movies: [Movie]?
+    
     func setViewDelegate(view: UpcomingListView) {
         self.view = view
     }
@@ -28,6 +29,7 @@ class UpcomingListPresenter: NSObject {
         MovieService.getMovies(page: page) { (success, message, movies) in
             if success {
                 self.view?.showLoading()
+                self.movies = movies
                 self.view?.setupMoviesList(movies: movies!)
                 self.view?.reloadTableView()
             } else {

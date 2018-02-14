@@ -30,7 +30,9 @@ class UpcomingListViewController: UIViewController {
     
     func customLayout() {
         self.removeNavBarLine()
-        self.setNavigation(title: "Upcoming Movies", withTintColor: .black, barTintColor: .white, andAttributes: [NSAttributedStringKey.font: UIFont.openSansLight(withSize: 24), NSAttributedStringKey.foregroundColor: UIColor.black], prefersLargeTitles: true)
+        self.setNavigation(title: "Upcoming Movies", withTintColor: .white, barTintColor: .black, andAttributes: [NSAttributedStringKey.font: UIFont.openSansLight(withSize: 24), NSAttributedStringKey.foregroundColor: UIColor.white], prefersLargeTitles: false, blurNavigation: false)
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.blackTranslucent
     }
 }
 
@@ -42,6 +44,7 @@ extension UpcomingListViewController: UpcomingListView {
                     let cell = MovieListTableViewCell.loadData(cell: mtvc, movie: movie)
                     self.addCellInTableView(cell: cell!)
                 }
+                DBManager.update(movie)
             }
         }
     }
@@ -93,10 +96,13 @@ extension UpcomingListViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let storyboard = UIStoryboard(name: "AdDetail", bundle: nil)
-//        if let vc = storyboard.instantiateInitialViewController() as? AdDetailViewController {
-//            vc.ad = ads[indexPath.row]
-//            self.navigationController?.pushViewController(vc, animated: false)
-//        }
+        let storyboard = UIStoryboard(name: "MovieDetails", bundle: nil)
+        if let vc = storyboard.instantiateInitialViewController() as? MovieDetailsViewController {
+            if let movies = presenter.movies {
+                vc.movie = movies[indexPath.row]
+            }
+           
+            self.navigationController?.pushViewController(vc, animated: false)
+        }
     }
 }
