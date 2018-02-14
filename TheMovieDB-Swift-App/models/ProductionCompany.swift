@@ -1,8 +1,8 @@
 //
-//  Genre.swift
+//  ProductionCompany.swift
 //  TheMovieDB-Swift-App
 //
-//  Created by Willian Pinho on 12/02/18.
+//  Created by Willian Pinho on 14/02/18.
 //  Copyright © 2018 Willian Pinho. All rights reserved.
 //
 
@@ -11,8 +11,8 @@ import ObjectMapperAdditions
 import RealmSwift
 import RealmAdditions
 
-class Genre: Object, Mappable {
-
+class ProductionCompany: Object, Mappable {
+    
     @objc dynamic var id = 0
     @objc dynamic var name: String = ""
     
@@ -28,4 +28,5 @@ class Genre: Object, Mappable {
     override static func primaryKey() -> String? {
         return "id"
     }
+    
 }
