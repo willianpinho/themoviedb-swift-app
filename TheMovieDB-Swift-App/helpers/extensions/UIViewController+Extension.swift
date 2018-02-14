@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 extension UIViewController {
-    func setNavigation(title: String, withTintColor tintColor: UIColor, barTintColor: UIColor, andAttributes attributes: [NSAttributedStringKey : Any], prefersLargeTitles: Bool) {
+    func setNavigation(title: String, withTintColor tintColor: UIColor, barTintColor: UIColor, andAttributes attributes: [NSAttributedStringKey : Any], prefersLargeTitles: Bool, blurNavigation: Bool) {
         let navigationBar = navigationController!.navigationBar
         
         navigationBar.tintColor = tintColor
@@ -18,11 +18,21 @@ extension UIViewController {
         navigationBar.barTintColor = barTintColor
         navigationBar.prefersLargeTitles = prefersLargeTitles
         navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: tintColor]
+        if blurNavigation == true {
+            self.blurNavigation()
+        }
+        
         self.title = title
     }
     
     func removeBackButtonTitle() {
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+    }
+    
+    func blurNavigation() {
+        let visualEffectView   = UIVisualEffectView(effect: UIBlurEffect(style: .light))
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.addSubview(visualEffectView)
     }
     
     func removeNavBarLine(){
