@@ -8,13 +8,9 @@
 
 The first release of the app will be very limited in scope, but will serve as the foundation for future releases. It's expected that user will be able to:
 
-● Scroll through the list of upcoming movies - including movie name, poster or backdrop image, genre and release date. List should not be limited to show only 
-the first 20 movies as returned by the API.
+● Scroll through the list of upcoming movies - including movie name, poster or backdrop image, genre and release date. List should not be limited to show only the first 20 movies as returned by the API. **(Didn't add infinite scroll)**
 
 ● Select a specific movie to see details (name, poster image, genre, overview and release date).
-
-
-![](header.png)
 
 ## Features
 
