@@ -1,16 +1,14 @@
 //
-//  MovieListTableViewCell.swift
+//  HeaderMovieDetailsTableViewCell.swift
 //  TheMovieDB-Swift-App
 //
-//  Created by Willian Pinho on 12/02/18.
+//  Created by Willian Pinho on 14/02/18.
 //  Copyright © 2018 Willian Pinho. All rights reserved.
 //
 
 import UIKit
-import Kingfisher
 
-class MovieListTableViewCell: UITableViewCell {
-    
+class HeaderMovieDetailsTableViewCell: UITableViewCell {
     @IBOutlet weak var posterImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var genresLabel: UILabel!
@@ -21,14 +19,14 @@ class MovieListTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    
+
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
+
         // Configure the view for the selected state
     }
     
-    static func loadData(cell: MovieListTableViewCell, movie: Movie) -> MovieListTableViewCell? {
+    static func loadData(cell: HeaderMovieDetailsTableViewCell, movie: Movie) -> HeaderMovieDetailsTableViewCell? {
         if let title = movie.title {
             cell.titleLabel.text = title
         }
@@ -48,29 +46,26 @@ class MovieListTableViewCell: UITableViewCell {
             cell.voteAverageLabel.text = String(format: "%.1f", voteAverage) + "/10"
         }
         
-        if let genreIds = movie.genreIds {
-            cell.genresLabel.text = parseGenres(movie: movie, genres: Array(genreIds))
-        }
-
+       cell.genresLabel.text = parseGenres(movie: movie, genres: Array(movie.genres))
+        
         return cell
     }
     
-    static func parseGenres(movie: Movie, genres: [Int]) -> String?  {
+    static func parseGenres(movie: Movie, genres: [Genre]) -> String?  {
         var genreString = String()
-
+        
         _ = genres.flatMap {
-            let currentGenre:Genre = DBManager.getByPrimaryKey(value: $0)
+            let currentGenre:Genre = DBManager.getByPrimaryKey(value: $0.id)
             if genres.last == $0 {
                 genreString = genreString + currentGenre.name
             } else {
                 genreString = genreString + currentGenre.name + ", "
             }
-                        
+            
             return nil
         }
         
         return genreString
     }
-    
     
 }
