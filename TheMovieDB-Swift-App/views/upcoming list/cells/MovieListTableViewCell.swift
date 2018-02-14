@@ -49,26 +49,28 @@ class MovieListTableViewCell: UITableViewCell {
         }
         
         if let genres = movie.genreIds {
-            var genreString = String()
-            
-            _ = genres.flatMap{
-                let currentGenre:Genre = DBManager.getByPrimaryKey(value: $0)
-                if let genreName = currentGenre.name {
-                    if genres.last == $0 {
-                        genreString = genreString + genreName
-                    } else {
-                        genreString = genreString + genreName + ", "
-                    }
-                }
-                
-                return genreString
-            }
-            
-            cell.genresLabel.text = genreString
-            
+            cell.genresLabel.text = parseGenres(genres: genres)
         }
         
         return cell
+    }
+    
+    static func parseGenres(genres: [Int]) -> String?  {
+        var genreString = String()
+
+        _ = genres.flatMap {
+            let currentGenre:Genre = DBManager.getByPrimaryKey(value: $0)
+            if let genreName = currentGenre.name {
+                if genres.last == $0 {
+                    genreString = genreString + genreName
+                } else {
+                    genreString = genreString + genreName + ", "
+                }
+            }
+            return nil
+        }
+        
+        return genreString
     }
     
 }
