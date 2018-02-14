@@ -8,9 +8,9 @@
 
 The first release of the app will be very limited in scope, but will serve as the foundation for future releases. It's expected that user will be able to:
 
-● Scroll through the list of upcoming movies - including movie name, poster or backdrop image, genre and release date. List should not be limited to show only the first 20 movies as returned by the API. **(Didn't add infinite scroll)**
+- Scroll through the list of upcoming movies - including movie name, poster or backdrop image, genre and release date. List should not be limited to show only the first 20 movies as returned by the API. **(Didn't add infinite scroll)**
 
-● Select a specific movie to see details (name, poster image, genre, overview and release date).
+●- Select a specific movie to see details (name, poster image, genre, overview and release date).
 
 ## Features
 
@@ -31,6 +31,11 @@ You can use [CocoaPods](http://cocoapods.org/) to run Application
 #### Manually
 1. Clone the project and  ```pod install``` in your project.  
 2. Congratulations!  
+
+#### Time Worked
+- 09/02/2018 - (16:30 - 20:10) - 3h40m
+- 12/02/2018 - (18:40 - 21:40) - 3h
+- 14/02/2018 - (12:40 - 14:50) - 2h10m
 
 
 [swift-image]:https://img.shields.io/badge/swift-4.0-orange.svg
